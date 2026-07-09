@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume-1</title>
+    <link rel="icon" href="./img/sticker_20.avif" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #F2F6F9;
+            color: #2A324B;
+        }
+        
+        /* กรอบหลักของ Resume */
+        .resume-container {
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(42, 50, 75, 0.1);
+            margin-top: 40px; margin-bottom: 40px;
+            position: relative;
+            border-top: 5px solid #00AEE9;
+        }
+        /* ตัดมุมขวาล่างของกรอบ Resume */
+        .resume-container::after {
+            content: '';
+            position: absolute;
+            bottom: 0; right: 0;
+            width: 30px; height: 30px;
+            background-color: #F2F6F9;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+        
+        /* แถบด้านซ้ายมือ (Sidebar) */
+        .resume-sidebar {
+            background-color: #2A324B; 
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px 0 0 8px;
+            position: relative;
+        }
+        /* เส้นสีเหลืองตกแต่ง Sidebar ขอบขวา */
+        .resume-sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 4px; height: 100%;
+            background-color: #F3C74B;
+        }
+        
+        /* รูปโปรไฟล์ */
+        .profile-img {
+            width: 220px;  /* 👈 เปลี่ยนจาก 150px เป็น 220px (หรือปรับเลขตามชอบ) */
+            height: 220px; /* 👈 เปลี่ยนให้เท่ากับความกว้าง รูปจะได้เป็นจัตุรัส */
+            border-radius: 8px;
+            border: 3px solid #00AEE9;
+            margin-bottom: 20px;
+            object-fit: cover;
+            background-color: white;
+            padding: 5px;
+        }
+        
+        /* เนื้อหาด้านขวามือ (Main Content) */
+        .resume-main {
+            padding: 40px;
+        }
+        .section-title {
+            color: #00AEE9;
+            font-weight: 700;
+            font-style: italic;
+            border-bottom: 2px solid #F2F6F9; /* เส้นใต้หัวข้อ */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        /* แถบหลอดพลัง (Skill Bar) */
+        .skill-bar {
+            background-color: #00AEE9;
+            border-radius: 0;
+        }
+        .progress {
+            border-radius: 0;
+            background-color: #E2E8F0;
+        }
+        
+        /* ปุ่มย้อนกลับ */
+        .back-btn {
+            background-color: rgba(0, 174, 233, 0.1); /* พื้นหลังสีฟ้าโปร่งแสงนิดๆ */
+            color: #FFFFFF;
+            border: 2px solid #00AEE9; /* ขอบสีฟ้าสว่างและหนาขึ้นเป็น 2px */
+            border-radius: 4px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            letter-spacing: 1px; /* ถ่างช่องไฟตัวอักษรนิดนึงให้ดูเท่ */
+        }
+        .back-btn:hover {
+            background-color: #00AEE9; /* พื้นหลังทึบตอนเอาเมาส์ชี้ */
+            color: white;
+            border-color: #00AEE9;
+            box-shadow: 0 0 12px rgba(0, 174, 233, 0.6); /* เพิ่มเอฟเฟกต์ขอบเรืองแสง */
+            transform: translateY(-2px); /* ปุ่มขยับลอยขึ้นนิดนึง */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container"> <div class="row resume-container">
+            
+            <div class="col-md-4 resume-sidebar">
+                <button type="button" onclick="window.close();" class="btn back-btn btn-sm w-100 fw-bold">&larr; Back To Home</button>
+                <img src="./img/25_P1012110.jpg" alt="Profile" class="profile-img">
+                <h3 class="fw-bold" style="color: #00AEE9;">นายวาริ ภูรีวัฒนะ</h3>
+                <p class="text-light opacity-75 mb-0">นักศึกษา - มหาวิทยาลัยสวนดุสิต</p>
+                <p class="text-info small mb-3 mt-1">สาขาวิชาเทคโนโลยีสารสนเทศ / ชั้นปีที่ 2</p>
+
+                <hr class="border-secondary opacity-50 w-100">
+
+                <div class="text-start mt-3">
+                    <h6 class="fw-bold" style="color: #F3C74B;">PERSONAL INFO</h6>
+                    <p class="mb-2"><small>🎂 <strong>วันเกิด:</strong> 3 สิงหาคม 2549</small></p>
+                    <p class="mb-2"><small>⏳ <strong>อายุ:</strong> 19 ปี</small></p>
+                    <p class="mb-2"><small>🚩 <strong>สัญชาติ:</strong> ไทย</small></p>
+                    <p class="mb-2"><small>🙏 <strong>ศาสนา:</strong> พุทธ</small></p>
+                </div>
+
+                <hr class="border-secondary opacity-50 w-100 mt-3">
+
+                <div class="text-start mt-3 mb-4">
+                    <h6 class="fw-bold" style="color: #F3C74B;">CONTACT INFO</h6>
+                    <p class="mb-2"><small>📧 u6811011940046@mail.dusit.ac.th</small></p>
+                    <p class="mb-2"><small>📞 0805820830</small></p>
+                    <p class="mb-2"><small>📍 Rayong, Thailand</small></p>
+                </div>
+            </div>
+
+            <div class="col-md-8 resume-main">
+                
+                <div class="mb-5">
+                    <h4 class="section-title">About Student</h4>
+                    <p class="text-muted">กำลังศึกษาอยู่ในมหาวิทยาลัยสวนดุสิต สาขาวิชาเทคโนโลยีสารสนเทศ คณะวิทยาศาสตร์และเทคโนโลยี ชั้นปีที่ 2</p>
+                </div>
+
+                <div class="mb-5">
+                    <h4 class="section-title">ACADEMIC RECORD</h4>
+    
+                    <div class="mb-4 pb-3 border-bottom border-light"> 
+                        <div class="d-flex justify-content-between align-items-center mb-1">
+                            <h6 class="fw-bold mb-0 text-dark">
+                                มหาวิทยาลัยสวนดุสิต 
+                                <span class="badge bg-light text-secondary border ms-2" style="font-weight: 500; font-size: 0.75em;">ปริญญาตรี</span>
+                            </h6>
+                            <span class="badge" style="background-color: #4C5B7F;">2568 - ปัจจุบัน</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <p class="text-muted small mb-0">สาขาวิชา: เทคโนโลยีสารสนเทศ</p>
+                        <span class="small fw-bold" style="color: #00AEE9;">เกรดเฉลี่ย: 3.60</span>
+                    </div>
+                </div>
+
+                <div class="mb-4 pb-3 border-bottom border-light">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <h6 class="fw-bold mb-0 text-dark">
+                            วิทยาลัยเทคนิคระยอง
+                            <span class="badge bg-light text-secondary border ms-2" style="font-weight: 500; font-size: 0.75em;">ปวช.</span>
+                        </h6>
+                        <span class="badge" style="background-color: #4C5B7F;">2565 - 2568</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-muted small mb-0">สาขาวิชา: คอมพิวเตอร์ธุรกิจ</p>
+                    <span class="small fw-bold" style="color: #00AEE9;">เกรดเฉลี่ย: 3.58</span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <h6 class="fw-bold mb-0 text-dark">
+                        โรงเรียนวังจันทร์วิทยา
+                        <span class="badge bg-light text-secondary border ms-2" style="font-weight: 500; font-size: 0.75em;">มัธยมศึกษาตอนต้น</span>
+                    </h6>
+                    <span class="badge" style="background-color: #4C5B7F;">2562 - 2565</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="text-muted small mb-0">สาขาวิชา: EIS</p>
+                <span class="small fw-bold" style="color: #00AEE9;">เกรดเฉลี่ย: 3.45</span>
+            </div>
+        </div>
+
+</div>
+                <div class="mb-4">
+                    <h4 class="section-title">TECHNICAL SKILLS</h4>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-end mb-1">
+                            <span class="fw-bold text-dark small">Python</span>
+                            <span class="small fw-bold" style="color: #4C5B7F; font-size: 0.75rem;">BASIC (พื้นฐาน)</span>
+                        </div>
+                        <div class="d-flex gap-1" style="height: 6px;">
+                            <div class="w-100 skill-bar"></div>
+                            <div class="w-100 skill-bar"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-end mb-1">
+                            <span class="fw-bold text-dark small">HTML / CSS</span>
+                            <span class="small fw-bold" style="color: #4C5B7F; font-size: 0.75rem;">BASIC (พื้นฐาน)</span>
+                        </div>
+                        <div class="d-flex gap-1" style="height: 6px;">
+                            <div class="w-100 skill-bar"></div>
+                            <div class="w-100 skill-bar"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-end mb-1">
+                            <span class="fw-bold text-dark small">Blender</span>
+                            <span class="small fw-bold" style="color: #00AEE9; font-size: 0.75rem;">INTERMEDIATE (ปานกลาง)</span>
+                        </div>
+                        <div class="d-flex gap-1" style="height: 6px;">
+                            <div class="w-100 skill-bar"></div>
+                            <div class="w-100 skill-bar"></div>
+                            <div class="w-100 skill-bar"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-end mb-1">
+                            <span class="fw-bold text-dark small">Network</span>
+                            <span class="small fw-bold" style="color: #4C5B7F; font-size: 0.75rem;">BASIC (พื้นฐาน)</span>
+                        </div>
+                        <div class="d-flex gap-1" style="height: 6px;">
+                            <div class="w-100 skill-bar"></div>
+                            <div class="w-100 skill-bar"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                            <div class="w-100" style="background-color: #E2E8F0;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
